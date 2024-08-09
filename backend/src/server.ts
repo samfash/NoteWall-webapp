@@ -14,7 +14,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://notewall-ten.vercel.app",
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
