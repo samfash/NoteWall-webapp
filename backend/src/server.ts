@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', authMiddleware, noteRoutes);
 
+
 mongoose.connect(process.env.MONGODB_URI!)
   .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
   .catch(error => console.log(error.message));
